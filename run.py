@@ -7,16 +7,15 @@ from simtk.openmm import *
 from sys import stdout
 from tqdm import tqdm
 import time
-import matplotlib.pyplot as plt
-import MDAnalysis
 from MDAnalysis.lib.distances import calc_dihedrals
 from openmmtools.integrators import VVVRIntegrator
 from parmed.openmm.reporters import NetCDFReporter as Reporter
 import sys
 from tps_openmm import *
 from functions import Functions
-import os.path
+
 from os import path
+
 def engine(topol,dims,conf,vels,nsteps,dt,random_vel=False):
     top = GromacsTopFile(topol, periodicBoxVectors=dims)
     system = top.createSystem(nonbondedMethod=PME, nonbondedCutoff=1.4*nanometer,rigidWater=True,ewaldErrorTolerance=0.0005)
