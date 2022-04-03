@@ -6,13 +6,10 @@ class Functions:
         self.psi_indices = [6,8,14,16]
         self.indicatorA = np.array([[35,140],[-100,95]]) * np.pi/180
         self.indicatorB = np.array([[-180, -35],[95,180]]) * np.pi/180
-#        self.indicatorC = np.array([[-30,30],[-180,180]])* np.pi/180
-#        self.indicatorC = np.array([[-20,20],[-180,180]])* np.pi/180
         self.indicatorC = np.array([[-25,12],[-180,180]])* np.pi/180
         self.water_idx  = np.arange(22,9022,3)
         self.adp_idx    = np.array([1,5,7,9,11,15,17,19]) - 1
         self.adp_mass   = np.array([12,12,14,12,12,12,14,12])
-#        self.bias       = 200
         self.bias       = 100
         self.y0         = y0
 
